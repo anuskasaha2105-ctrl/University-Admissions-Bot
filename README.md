@@ -13,6 +13,7 @@ The University Admission Bot is an AI-driven admission support system designed t
 
 Acting as a 24×7 virtual admission officer, the bot reduces the workload on admission staff, ensures information consistency, and efficiently handles large volumes of queries. Its scalable and integrable design allows easy deployment across university portals and EdTech platforms, improving operational efficiency and student experience.
 
+
 ## Features
 1. Provides eligibility requirements for various university programs  
 2. Guides students step-by-step through the application process  
@@ -30,7 +31,32 @@ Acting as a 24×7 virtual admission officer, the bot reduces the workload on adm
 - **Programming Language:** Python  
 - **Framework:** Flask (Backend)  
 - **AI / NLP:** OpenAI API or rule-based logic  
-- **Data Format:** JSON  
+- **Data Format:** JSON
+
+## Project Folder Structure
+
+```text
+University-Admissions-Bot/
+├── bot/
+│   ├── bot_logic.py
+│   └── responses.json
+│
+├── docs/
+│   └── project_overview.md
+│
+├── data/
+│   └── sample_university_data.json
+│
+├── README.md
+└── requirements.txt
+```
+###  Folder Description
+
+- **bot/** – Contains the core chatbot logic and response handling files  
+- **docs/** – Holds detailed project documentation and explanations  
+- **data/** – Stores sample university admission data in structured format  
+- **README.md** – Main project documentation and usage instructions  
+- **requirements.txt** – Lists all Python dependencies required to run the project
 
 ## How to Run
 1. Clone the repository  
