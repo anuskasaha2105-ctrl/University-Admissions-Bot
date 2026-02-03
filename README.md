@@ -23,17 +23,15 @@ Acting as a 24×7 virtual admission officer, the bot reduces the workload on adm
 4. **User Interaction:** Student can ask follow-up questions for clarification.
    
 ## Technologies Used
-1.Programming Language: Python
-2.Framework: Flask (for backend)
-3.AI / NLP: OpenAI API (or rule-based logic)
-4.Data Format: JSON
-5.Version Control: Git & GitHub
+1. Programming Language: Python
+2. Framework: Flask (for backend)
+3. AI / NLP: OpenAI API (or rule-based logic)
+4. Data Format: JSON
 
 ## How to Run
 
 1. Clone the repository
    ```bash
-
 git clone--> https://github.com/anuskasaha2105-ctrl/University-Admissions-Bot
 2. pip install -r requirements.txt
 3.python bot/bot_logic.py
