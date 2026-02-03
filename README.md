@@ -40,7 +40,11 @@ git clone--> https://github.com/anuskasaha2105-ctrl/University-Admissions-Bot
 
 ## Future Enhancements
 1.Integration with real university databases
+
 2.Multi-language support
+
 3.Personalized recommendations based on student profile
+
 4.Deadline alerts and reminders
+
 5.Web and mobile interfaceIntegrate a web interface for live interaction
