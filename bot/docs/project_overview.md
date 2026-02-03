@@ -1,4 +1,4 @@
-# 📘 Project Documentation -- ## University Admission Bot
+# 📘 Project Documentation -- ## University Admissions Bot
 
 ## 🧱 1. System Architecture Overview
 The University Admission Bot follows a modular and layered architecture to ensure scalability, maintainability, and clarity. The system separates user interaction, processing logic, and data storage into independent components.
