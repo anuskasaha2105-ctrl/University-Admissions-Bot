@@ -30,11 +30,11 @@ Acting as a 24×7 virtual admission officer, the bot reduces the workload on adm
 
 ## How to Run
 
-1. Clone the repository
-   -git clone-->
-      https://github.com/anuskasaha2105-ctrl/University-Admissions-Bot
+ 1. Clone the repository
+   --git clone-->
+     ''' https://github.com/anuskasaha2105-ctrl/University-Admissions-Bot
    
-2. pip install -r requirements.txt
+ 2. pip install -r requirements.txt
 
  3.python bot/bot_logic.py
 
