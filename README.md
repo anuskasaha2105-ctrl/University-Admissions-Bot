@@ -36,7 +36,7 @@ Acting as a 24×7 virtual admission officer, the bot reduces the workload on adm
    
 2. pip install -r requirements.txt
 
-3.python bot/bot_logic.py
+ 3.python bot/bot_logic.py
 
 ## Future Enhancements
 1.Integration with real university databases
