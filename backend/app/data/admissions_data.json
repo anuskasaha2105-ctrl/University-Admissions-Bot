@@ -1,0 +1,23 @@
+{
+  "B.Tech": {
+    "eligibility": "Must have completed 12th with Physics, Chemistry, and Mathematics with minimum 60% marks.",
+    "admission_start": "Admissions usually start in May every year.",
+    "documents": [
+      "10th Marksheet",
+      "12th Marksheet",
+      "Transfer Certificate",
+      "ID Proof",
+      "Passport-size Photographs"
+    ]
+  },
+  "BBA": {
+    "eligibility": "Must have completed 12th in any stream with minimum 50% marks.",
+    "admission_start": "Admissions usually start in June every year.",
+    "documents": [
+      "10th Marksheet",
+      "12th Marksheet",
+      "Transfer Certificate",
+      "ID Proof"
+    ]
+  }
+}
