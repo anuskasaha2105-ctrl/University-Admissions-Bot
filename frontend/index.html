@@ -1,26 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>University Admissions Bot</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>University Admissions Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: 
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("https://images.unsplash.com/photo-1576495199011-eb94736d05d6?auto=format&fit=crop&w=1950&q=80");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .main-title {
+            position: absolute;
+            top: 40px;
+            text-align: center;
+            color: #f8d210;
+        }
+
+        .main-title h1 {
+            font-size: 38px;
+            font-weight: 600;
+        }
+
+        .main-title p {
+            font-size: 16px;
+            margin-top: 5px;
+            color: #eee;
+        }
+
+        .chat-container {
+            width: 700px;
+            height: 550px;
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chat-box {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            padding: 14px 18px;
+            font-size: 16px;
+            border-radius: 12px;
+            max-width: 80%;
+            margin-bottom: 12px;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .user-message {
+            background: #f8d210;
+            color: #000;
+            align-self: flex-end;
+        }
+
+        .bot-message {
+            background: #003366;
+            color: white;
+            align-self: flex-start;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-area input {
+            flex: 1;
+            height: 50px;
+            font-size: 15px;
+            padding: 0 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+
+        .input-area button {
+            padding: 10px 25px;
+            font-size: 15px;
+            border-radius: 10px;
+            border: none;
+            background: #f8d210;
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .input-area button:hover {
+            background: #e6c200;
+        }
+
+        /* Scrollbar Styling */
+        .chat-box::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-box::-webkit-scrollbar-thumb {
+            background: #f8d210;
+            border-radius: 5px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .chat-container {
+                width: 95%;
+                height: 80%;
+            }
+
+            .main-title h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>🎓 University Admissions Assistant</h1>
+    <div class="main-title">
+        <h1>University Admissions Assistant</h1>
+        <p>Your smart guide for courses, eligibility & admissions</p>
     </div>
 
-    <div class="chat-box" id="chatBox"></div>
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox">
+            <div class="message bot-message">
+                🎓 Welcome! Ask me about eligibility, courses, fees, admissions & more.
+            </div>
+        </div>
 
-    <div class="input-area">
-        <input type="text" id="userInput" placeholder="Ask about B.Tech eligibility...">
-        <button onclick="sendMessage()">Send</button>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Ask about B.Tech eligibility...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <script>
+        function sendMessage() {
+            const input = document.getElementById("userInput");
+            const chatBox = document.getElementById("chatBox");
 
+            if (input.value.trim() === "") return;
+
+            const userMessage = document.createElement("div");
+            userMessage.className = "message user-message";
+            userMessage.textContent = input.value;
+            chatBox.appendChild(userMessage);
+
+            // Fake typing animation
+            const botMessage = document.createElement("div");
+            botMessage.className = "message bot-message";
+            botMessage.textContent = "Typing...";
+            chatBox.appendChild(botMessage);
+
+            setTimeout(() => {
+                botMessage.textContent = "B.Tech Eligibility: Must have completed 12th with Physics, Chemistry, and Mathematics with minimum 60% marks.";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+
+            input.value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
 
 </body>
 </html>
